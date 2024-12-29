@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Media Admin Dashboard</title>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!-- BANNER STARTS ************************************************************ -->
+     <section class="banner_section">
+        <figure class="admin_profile_pic">
+            <img src="img/banner.svg" alt="">
+        </figure>
+     </section>
+    <!-- BANNER ENDS ************************************************************ -->
+
+    <!-- MAIN SECTION START ***************************************************** -->
+     <main class="main_section">
+        <div class="main_wrapper">
+            <div class="city_and_report_container">
+                <h1 class="city">123 HOUSE, STREET, CITY</h1><span>|</span>
+                <h2 class="report text_gradient">JAN-DEC - TRAFFIC REPORT</h2>
+            </div>
+            <div class="report_box_container">
+                <div class="gradient-box stroke_gradient">
+                    <div class="gradient_top">
+                        <figure class="report_icon">
+                            <img src="img/icons/visits.svg" alt="">
+                        </figure>
+                        <p class="report_head">VISITS</p>
+                    </div>
+                    <div class="gradient_bottom">
+                        <h3 class="num">540</h3>
+                    </div>
+                </div>
+                <div class="gradient-box stroke_gradient">
+                    <div class="gradient_top">
+                        <figure class="report_icon">
+                            <img src="img/icons/pageview.svg" alt="">
+                        </figure>
+                        <p class="report_head">PAGE VIEWS</p>
+                    </div>
+                    <div class="gradient_bottom">
+                        <h3 class="num">1654</h3>
+                    </div>
+                </div>
+                <div class="gradient-box stroke_gradient">
+                    <div class="gradient_top">
+                        <figure class="report_icon ast">
+                            <img src="img/icons/clock.svg" alt="">
+                        </figure>
+                        <p class="report_head">AVERAGE SPENT TIME</p>
+                    </div>
+                    <div class="gradient_bottom num_top">
+                        <h3 class="num">60.1</h3><span class="">SECONDS</span>
+                    </div>
+                </div>
+                <div class="gradient-box stroke_gradient">
+                    <div class="gradient_top">
+                        <figure class="report_icon ast">
+                            <img src="img/icons/totaltime.svg" alt="">
+                        </figure>
+                        <p class="report_head">TOTAL TIME</p>
+                    </div>
+                    <div class="gradient_bottom num_top">
+                        <h3 class="num">1200</h3><span class="">MINUTES</span>
+                    </div>
+                </div>
+            </div>
+            <div class="charts_container">
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/visits.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">VIEWS AND PAGE VIEWS</p>
+                        <div class="scale_container">
+                            <div class="top_scale">
+                                <div class="scale_box box_up"></div>
+                                <p class="scale_label">Visits</p>
+                            </div>
+                            <div class="bottom_scale">
+                                <div class="scale_box box_bottom"></div>
+                                <p class="scale_label">Views</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart_graph">
+                        <canvas id="viewsPageViewsChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/clock.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">AVG TIME SPENT</p>
+                    </div>
+                    <div class="chart_graph">
+                        <canvas id="avgTimeSpentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="charts_container">
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/traffic_sources.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">TRAFFIC SOURCES</p>
+                    </div>
+                    <div class="chart_graph cg">
+                        <canvas id="trafficSourcesChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/visit_by_devices.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">VISIT BY DEVICE</p>
+                    </div>
+                    <div class="chart_graph cg">
+                        <canvas id="visitsByDeviceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+     </main>
+    <!-- MAIN SECTION END ***************************************************** -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@media print {
+    /* Ensure background colors and gradients print */
+    body {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    /* Hide unnecessary sections */
+    .no-print, header, footer {
+        display: none !important;
+    }
+
+    /* Simplify gradients and decorations */
+    .text_gradient, .stroke_gradient {
+        color: black !important;
+        border: none !important;
+    }
+
+    /* Adjust for print-friendly layout */
+    .banner_section, .main_section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .charts_container, .report_box_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .num {
+        font-size: 30px !important;
+    }
+
+    .chart_topic {
+        font-size: 12px !important;
+    }
+
+    /* Page breaks */
+    .main_section {
+        page-break-before: always;
+    }
+
+    .gradient-box {
+        page-break-inside: avoid;
+    }
+
+    /* Chart adjustments */
+    #trafficSourcesChart, #visitsByDeviceChart {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Avoid splitting tables and lists */
+    table, ul, ol {
+        page-break-inside: avoid;
+    }
+}
+
+@page {
+    margin: 20mm;
+}
