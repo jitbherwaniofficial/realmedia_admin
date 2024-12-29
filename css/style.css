@@ -631,8 +631,26 @@
         width: 100%;
         height: 50vw;
     }
+
+    .city_traffic_gradient_bar {
+        margin: 5vw 0;
+    }
+
+    .line_scale {
+        margin-top: 6vw;
+    }
+
+    .scale_tb {
+        position: relative;
+        top: 5vw;
+    }
 }
 
+@media only screen and (max-width: 450px) {
+    .main_wrapper {
+        gap: 10vw;
+    }
+}
 
 
 
