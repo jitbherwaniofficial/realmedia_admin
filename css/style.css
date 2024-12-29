@@ -540,6 +540,10 @@
     font-size: 2.6vw;
 }
 
+.col_data_para {
+    font-size: 1.2vw;
+}
+
 /* MAIN SECTION ********************************************** */
 
 
@@ -572,6 +576,60 @@
 
     .charts_container {
         flex-direction: column;
+    }
+
+    .chart_box {
+        width: 100%;
+        gap: 3.5vw;
+    }
+
+    .chart_head {
+        width: 100%;
+    }
+    .chart_icon {
+        width: 8vw;
+        height: 8vw;
+        margin-left: 0;
+    }
+    .chart_topic {
+        height: 7vw;
+        font-size: 3vw;
+        width: 60%;
+        padding-left: 3vw;
+    }
+
+    .charts_container {
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .country {
+        flex-direction: column-reverse;
+    }
+
+    .country_label {
+        width: 100%;
+    }
+    .c_name_and_no_container {
+        width: 100%;
+    }
+
+    .c_name_and_no p {
+        font-weight: 600;
+        font-size: 2.2vw;
+    }
+
+    .country_label {
+        width: 100%;
+        display: flex
+;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    #regions_div {
+        width: 100%;
+        height: 50vw;
     }
 }
 

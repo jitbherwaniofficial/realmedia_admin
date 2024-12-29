@@ -232,7 +232,7 @@ const customPlugin = {
 
         // Draw the central value
         ctx.save();
-        ctx.font = 'bold 60px Arial';
+        ctx.font = 'bold 6vw Arial';
         ctx.fillStyle = '#000';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
@@ -269,7 +269,7 @@ const customPlugin = {
             ctx.save();
 
             // Adjust font size for the label text (larger font for the label)
-            ctx.font = 'bold 23px Arial'; // Larger font size for the label
+            ctx.font = 'bold 20px Arial'; // Larger font size for the label
             ctx.fillStyle = '#000'; // Color for the label text
             ctx.textAlign = x2 > centerX ? 'right' : 'left'; // Left or right based on position
             ctx.textBaseline = 'middle';
