@@ -67,8 +67,8 @@ new Chart(viewsPageViewsCtx, {
         ],
     },
     options: {
-        responsive: false,
-        maintainAspectRatio: false, 
+        responsive: true,
+        maintainAspectRatio: true, 
         plugins: {
             legend: {
                 display: false,
@@ -115,8 +115,8 @@ new Chart(avgTimeSpentCtx, {
         ],
     },
     options: {
-        responsive: false,
-        maintainAspectRatio: false,
+        responsive: true,
+        maintainAspectRatio: true,
         plugins: {
             legend: {
                 display: false,
@@ -164,8 +164,8 @@ const data = {
 
 // Chart Options for Traffic Source
 const options = {
-    responsive: false,
-    maintainAspectRatio:false,
+    responsive: true,
+    maintainAspectRatio:true,
     plugins: {
         legend: {
             display: false, // Hide the default legend
@@ -287,8 +287,8 @@ const Vdata = {
 
 // Chart Options for Device Visit
 const Voptions = {
-    responsive: false, // Disable responsiveness
-    maintainAspectRatio: false, // Disable aspect ratio maintenance
+    responsive: true, // Disable responsiveness
+    maintainAspectRatio: true, // Disable aspect ratio maintenance
     plugins: {
         legend: {
             display: false, // Hide the default legend
