@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Media Admin Dashboard</title>
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
+
 <body>
     <!-- BANNER STARTS ************************************************************ -->
-     <section class="banner_section">
+    <section class="banner_section">
         <figure class="admin_profile_pic">
             <img src="img/banner.svg" alt="">
         </figure>
-     </section>
+    </section>
     <!-- BANNER ENDS ************************************************************ -->
 
     <!-- MAIN SECTION START ***************************************************** -->
-     <main class="main_section">
+    <main class="main_section">
         <div class="main_wrapper">
             <div class="city_and_report_container">
                 <h1 class="city">123 HOUSE, STREET, CITY</h1><span>|</span>
@@ -128,13 +130,389 @@
                     </div>
                 </div>
             </div>
+            <div class="charts_container">
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/globe.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">COUNTRY WISE TRAFFIC</p>
+                    </div>
+                    <div class="chart_graph">
+                        <!-- <canvas id="countryTrafficChart"></canvas> -->
+                        <div class="country_label">
+                            <div class="c_name_and_no_container">
+                                <div class="c_name_and_no">
+                                    <p class="country_name">Canada</p>
+                                    <p class="traffic_no">350</p>
+                                </div>
+                                <div class="p_bar">
+                                    <div class="val1"></div>
+                                </div>
+                            </div>
+                            <div class="c_name_and_no_container">
+                                <div class="c_name_and_no">
+                                    <p class="country_name">United States</p>
+                                    <p class="traffic_no">200</p>
+                                </div>
+                                <div class="p_bar">
+                                    <div class="val2"></div>
+                                </div>
+                            </div>
+                            <div class="c_name_and_no_container">
+                                <div class="c_name_and_no">
+                                    <p class="country_name">India</p>
+                                    <p class="traffic_no">100</p>
+                                </div>
+                                <div class="p_bar">
+                                    <div class="val3"></div>
+                                </div>
+                            </div>
+                            <div class="c_name_and_no_container">
+                                <div class="c_name_and_no">
+                                    <p class="country_name">Australia</p>
+                                    <p class="traffic_no">100</p>
+                                </div>
+                                <div class="p_bar">
+                                    <div class="val4"></div>
+                                </div>
+                            </div>
+                            <div class="c_name_and_no_container">
+                                <div class="c_name_and_no">
+                                    <p class="country_name">Germany</p>
+                                    <p class="traffic_no">50</p>
+                                </div>
+                                <div class="p_bar">
+                                    <div class="val5"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- google -->
+                        <div id="regions_div"></div>
+
+                    </div>
+                </div>
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/globe.svg" alt="">
+                        </figure>
+                        <p class="chart_topic">CITY WISE TRAFFIC</p>
+                        <div class="scale_container">
+                            <div class="top_scale">
+                                <div class="scale_box box_up"></div>
+                                <p class="scale_label">Visits</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart_graph ctc">
+                        <canvas id="cityTrafficChart"></canvas>
+                        <div class="city_traffic_gradient_bar">
+                            <p class="scale_num scale_tb">1</p>
+                            <div class="line_scale">
+                                <img src="img/icons/line.svg" alt="">
+                                <p class="scale_num">84</p>
+                            </div>
+                            <div class="line_scale">
+                                <img src="img/icons/line.svg" alt="">
+                                <p class="scale_num">167</p>
+                            </div>
+                            <div class="line_scale">
+                                <img src="img/icons/line.svg" alt="">
+                                <p class="scale_num">251</p>
+                            </div>
+                            <div class="line_scale">
+                                <img src="img/icons/line.svg" alt="">
+                                <p class="scale_num">334</p>
+                            </div>
+                            <div class="line_scale">
+                                <img src="img/icons/line.svg" alt="">
+                                <p class="scale_num">417</p>
+                            </div>
+                            <p class="scale_num scale_tb">500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="charts_container chart_last">
+                <div class="chart_box">
+                    <div class="chart_head">
+                        <figure class="chart_icon">
+                            <img src="img/icons/social.svg" alt="">
+                        </figure>
+                        <p class="chart_topic ct_last">SOCIAL MEDIA PERFORMANCE</p>
+                    </div>
+                    <div class="chart_graph cg_last">
+                        <div class="social_cv stroke_gradient">
+                            <div class="social">                                
+                                <figure class="social_icon">
+                                    <img src="img/icons/insta.svg" alt="">
+                                </figure>
+                                <p class="social_platform_name">Instagram</p>
+                            </div>
+                            <div class="collector">
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/impressions.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">36k</h3>
+                                        <p class="col_data_para">Impressions</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/heart.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">2000</h3>
+                                        <p class="col_data_para">Likes</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/comments.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">1000</h3>
+                                        <p class="col_data_para">Comments</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/share.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">500</h3>
+                                        <p class="col_data_para">Shares</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/engagement.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">4.5%</h3>
+                                        <p class="col_data_para">Engagement Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social_cv stroke_gradient">
+                            <div class="social">                                
+                                <figure class="social_icon">
+                                    <img src="img/icons/facebook.svg" alt="">
+                                </figure>
+                                <p class="social_platform_name">Facebook</p>
+                            </div>
+                            <div class="collector">
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/impressions.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">36k</h3>
+                                        <p class="col_data_para">Impressions</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/heart.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">2000</h3>
+                                        <p class="col_data_para">Likes</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/comments.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">1000</h3>
+                                        <p class="col_data_para">Comments</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/share.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">500</h3>
+                                        <p class="col_data_para">Shares</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/engagement.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">4.5%</h3>
+                                        <p class="col_data_para">Engagement Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social_cv stroke_gradient">
+                            <div class="social">                                
+                                <figure class="social_icon">
+                                    <img src="img/icons/tiktok.svg" alt="">
+                                </figure>
+                                <p class="social_platform_name">Tiktok</p>
+                            </div>
+                            <div class="collector">
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/impressions.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">36k</h3>
+                                        <p class="col_data_para">Impressions</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/heart.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">2000</h3>
+                                        <p class="col_data_para">Likes</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/comments.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">1000</h3>
+                                        <p class="col_data_para">Comments</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/share.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">500</h3>
+                                        <p class="col_data_para">Shares</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/engagement.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">4.5%</h3>
+                                        <p class="col_data_para">Engagement Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social_cv stroke_gradient">
+                            <div class="social">                                
+                                <figure class="social_icon">
+                                    <img src="img/icons/youtube.svg" alt="">
+                                </figure>
+                                <p class="social_platform_name">Youtube</p>
+                            </div>
+                            <div class="collector">
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/impressions.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">36k</h3>
+                                        <p class="col_data_para">Impressions</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/heart.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">2000</h3>
+                                        <p class="col_data_para">Likes</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/comments.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">1000</h3>
+                                        <p class="col_data_para">Comments</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/share.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">500</h3>
+                                        <p class="col_data_para">Shares</p>
+                                    </div>
+                                </div>
+                                <div class="collection">
+                                    <figure class="col_img">
+                                        <img src="img/icons/engagement.svg" alt="">
+                                    </figure>
+                                    <div class="col_data">
+                                        <h3 class="col_data_num">4.5%</h3>
+                                        <p class="col_data_para">Engagement Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-     </main>
+        </div>
+    </main>
     <!-- MAIN SECTION END ***************************************************** -->
 
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            // Define your data
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Traffic'],
+                ['Canada', 350],
+                ['United States', 200],
+                ['India', 100],
+                ['Australia', 100],
+                ['Germany', 50],
+            ]);
+
+
+            // var options = {};
+            var options = {
+                backgroundColor: 'transparent', // Optional: Light green background
+                datalessRegionColor: '#FFCC00', // Color for regions without data
+                defaultColor: '#FF0000', // Default region color
+                colorAxis: {
+                    colors: ['#FFA500', '#FF0000'], // Gradient from low to high values
+                },
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+            console.log(chart);
+
+            chart.draw(data, options);
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>

@@ -10,6 +10,10 @@ const visitsGradient = viewsPageViewsCtx.createLinearGradient(0, 0, 0, 400);
 visitsGradient.addColorStop(0, "#ff0000"); // Start color
 visitsGradient.addColorStop(1, "#320102"); // End color
 
+const visitsGradientRight = viewsPageViewsCtx.createLinearGradient(0, 0, 0, 400);
+visitsGradientRight.addColorStop(0, "#ff0000"); 
+visitsGradientRight.addColorStop(1, "#FFCC00"); 
+
 const pageViewsGradient = viewsPageViewsCtx.createLinearGradient(0, 0, 0, 400);
 pageViewsGradient.addColorStop(0, "#FFA600");
 pageViewsGradient.addColorStop(1, "#C93400");
@@ -55,14 +59,16 @@ new Chart(viewsPageViewsCtx, {
                 data: [12, 19, 3, 5, 2, 3, 10, 8, 15, 11, 18, 20],
                 backgroundColor: visitsGradient,
                 borderColor: "transparent",
-                borderWidth: 1,
+                // borderWidth: 1,
+                barThickness:15,
             },
             {
                 label: "Page Views",
                 data: [15, 10, 13, 6, 9, 7, 14, 12, 20, 16, 25, 22],
                 backgroundColor: pageViewsGradient,
                 borderColor: "transparent",
-                borderWidth: 1,
+                // borderWidth: 1,
+                barThickness:15,
             },
         ],
     },
@@ -74,9 +80,37 @@ new Chart(viewsPageViewsCtx, {
                 display: false,
             },
         },
+        // scales: {
+        //     y: {
+        //         beginAtZero: true,
+        //     },
+        // },
         scales: {
+            x: {
+              stacked: false,
+              grid: {
+                display: false,
+              },
+              ticks: {
+                color: '#000', // White text for x-axis
+                // font: {
+                //   size: 12,
+                // },
+              },
+              categoryPercentage: 1.0, // Ensures bars are close
+              barPercentage: 1.0, // Bars fill the category space
+            },
             y: {
-                beginAtZero: true,
+              beginAtZero: true,
+            //   grid: {
+            //     color: 'gray', // Grid color for dark mode
+            //   },
+              ticks: {
+                color: '#000', // White text for y-axis
+                // font: {
+                //   size: 12,
+                // },
+              },
             },
         },
     },
@@ -317,10 +351,31 @@ const vcustomDoughnutChart = new Chart(visitByDeviceCtx, {
 
 
 
-
-
-
-
-
+// City-Wise Traffic Chart
+const cityTrafficCtx = document.getElementById('cityTrafficChart').getContext('2d');
+const cityTrafficChart = new Chart(cityTrafficCtx, {
+  type: 'bar',
+  data: {
+    labels: ['Brampton', 'Toronto', 'Oakville', 'Hamilton', 'Barrie', 'Burlington', 'Ottawa', 'Mississauga', 'Kingston', 'Vaughan', 'Niagara Falls', 'London', 'Others'],
+    datasets: [{
+      label: 'Visits',
+      data: [950, 850, 750, 700, 650, 600, 550, 500, 450, 400, 350, 300, 250],
+      backgroundColor: visitsGradientRight,
+      borderColor: 'rgba(220, 53, 69, 1)',
+    //   borderWidth: 1
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
 
 
