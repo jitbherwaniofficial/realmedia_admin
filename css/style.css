@@ -351,7 +351,7 @@
     width: 3vw;
 }
 
-#viewsPageViewsChart,
+/* #viewsPageViewsChart,
 #avgTimeSpentChart 
 {
     width: 43vw !important;
@@ -361,11 +361,42 @@
 #trafficSourcesChart,
 #visitsByDeviceChart
 {
-    /* position: relative;
-    top: -6vw; */
     width: 42vw !important;
     height: 42vw !important;
-}
+} */
 
 
 /* MAIN SECTION ********************************************** */
+
+
+@media only screen and (max-width:768px) {
+    .city_and_report_container {
+        flex-direction: column;
+        padding: 2vw;
+        gap: 1vw;
+    }
+
+    .city_and_report_container span {
+        display: none;
+    }
+
+    .report,.city {
+        padding: 0;
+        margin: 0;
+        font-size: 4.5vw;
+    }
+
+    .report_box_container {
+        flex-wrap: wrap;
+        gap: 2vw;
+    }
+
+    .gradient-box {
+        width: 48.7%;
+        height: 20vw;
+    }
+
+    .charts_container {
+        flex-direction: column;
+    }
+}

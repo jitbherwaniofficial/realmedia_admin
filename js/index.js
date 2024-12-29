@@ -67,6 +67,8 @@ new Chart(viewsPageViewsCtx, {
         ],
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: true,
         plugins: {
             legend: {
                 display: false,
@@ -113,6 +115,7 @@ new Chart(avgTimeSpentCtx, {
         ],
     },
     options: {
+        responsive: true,
         plugins: {
             legend: {
                 display: false,
@@ -160,6 +163,7 @@ const data = {
 
 // Chart Options for Traffic Source
 const options = {
+    responsive: true,
     plugins: {
         legend: {
             display: false, // Hide the default legend
@@ -231,19 +235,20 @@ const customPlugin = {
             ctx.save();
 
             // Adjust font size for the label text (larger font for the label)
-            ctx.font = 'bold 2vw Arial'; // Larger font size for the label
+            ctx.font = 'bold 23px Arial'; // Larger font size for the label
             ctx.fillStyle = '#000'; // Color for the label text
             ctx.textAlign = x2 > centerX ? 'right' : 'left'; // Left or right based on position
             ctx.textBaseline = 'middle';
             const textX = horizontalLineX + (x2 > centerX ? 3.2 : 0);
-            const textY = horizontalLineY - 15;
+            const textY = horizontalLineY - 13;
 
             // Draw the label (name of the slice)
             ctx.fillText(`${chart.data.labels[index]} `, textX, textY);
 
             // Adjust font size back for value and percentage (smaller font size)
-            ctx.font = '1.2vw Arial'; // Smaller font size for value and percentage
-            ctx.fillStyle = slice.options.backgroundColor; // Color for value and percentage
+            ctx.font = '13.5px Arial'; // Smaller font size for value and percentage
+            // ctx.fillStyle = slice.options.backgroundColor; // Color for value and percentage
+            ctx.fillStyle = '#000'; // Color for value and percentage
 
             // Draw value and percentage in slice color, with the same alignment as the label
             ctx.fillText(`${value}`, textX, textY + 25);
@@ -281,6 +286,7 @@ const Vdata = {
 
 // Chart Options for Device Visit
 const Voptions = {
+    responsive: true, // Disable responsiveness
     plugins: {
         legend: {
             display: false, // Hide the default legend
